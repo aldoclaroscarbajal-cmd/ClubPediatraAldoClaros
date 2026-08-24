@@ -1,0 +1,6 @@
+{
+  "name": "Club Pediatra Aldo Claros",
+  "description": "Club Pediátrico Digital con mini apps, herramientas educativas, guías prácticas y una reunión mensual en directo con el Pediatra Aldo Claros.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
