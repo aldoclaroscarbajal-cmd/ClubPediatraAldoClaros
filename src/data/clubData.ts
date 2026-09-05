@@ -1,5 +1,7 @@
 import { LiveMeetingPart, ScheduledMeeting, MiniAppFeature, FAQItem } from '../types';
 
+export const HOTMART_CHECKOUT_URL = 'https://pay.hotmart.com/D92611928F';
+
 export const MEETING_PARTS: LiveMeetingPart[] = [
   {
     partNumber: 1,
@@ -30,12 +32,12 @@ export const MEETING_PARTS: LiveMeetingPart[] = [
 export const UPCOMING_MEETINGS: ScheduledMeeting[] = [
   {
     id: 'meet-1',
-    month: 'Próxima Reunión en Directo',
-    date: 'Sábado 21 de Septiembre',
-    time: '7:30 PM (Hora Lima/Perú)',
-    topic: 'Fiebre infantil, mocos y tos: Signos de alarma vs manejo tranquilo en casa',
-    description: 'Aprende a diferenciar una fiebre benigna de una emergencia, cómo medirla bien, qué hacer sin medicar en exceso y cuándo acudir a urgencias. Sesión 100% en vivo a través de un enlace privado en YouTube que se enviará a los miembros.',
-    tags: ['Salud Infantil', 'Signos de Alarma', 'YouTube En Vivo'],
+    month: 'Cada Mes (Sesión en Directo)',
+    date: '4° Sábado de cada mes',
+    time: '7:30 PM (Hora Lima / Perú)',
+    topic: 'Encuentro Educativo en Directo con el Pediatra Aldo Claros',
+    description: 'Sesión virtual en vivo para abordar temas clave de salud infantil, crianza, alimentación, crecimiento, prevención y resolver dudas de los padres por el chat. Transmitida en directo por Hotmart y las clases quedan grabadas en la plataforma para los que se suscriben.',
+    tags: ['Salud Infantil', 'Crianza y Crecimiento', 'En Vivo por Hotmart', 'Clases Grabadas', 'Preguntas de Padres'],
     status: 'upcoming'
   }
 ];
@@ -108,9 +110,9 @@ export const VALUE_PILLARS = [
   {
     number: '3',
     title: 'REUNIÓN MENSUAL EN DIRECTO',
-    subtitle: 'Un encuentro educativo conmigo cada mes por YouTube',
+    subtitle: 'Un encuentro educativo conmigo cada mes por Hotmart',
     icon: 'Video',
-    desc: 'Una reunión virtual en directo exclusiva cada mes por YouTube con el Pediatra Aldo Claros mediante enlace privado para revisar el tema del mes y resolver dudas.',
+    desc: 'Una reunión virtual en directo exclusiva cada mes transmitida en la plataforma de Hotmart con el Pediatra Aldo Claros para revisar el tema del mes y resolver dudas. Además, las clases quedan grabadas en la plataforma de Hotmart para los que se suscriben.',
     accent: 'border-teal-500/20 bg-teal-500/5 text-teal-700'
   }
 ];
@@ -124,24 +126,24 @@ export const CLUB_CHECKLIST_ITEMS = [
   'Calculadora de Sueño infantil y ventanas de vigilia',
   'Semáforo interactivo de Signos de Alarma para actuar a tiempo',
   'Nuevos recursos y herramientas incorporados periódicamente',
-  '1 reunión educativa EN DIRECTO cada mes por YouTube (enlace privado) con el Pediatra Aldo Claros',
+  '1 reunión educativa EN DIRECTO cada mes en la plataforma de Hotmart (las clases quedan grabadas para suscriptores)',
   'Comunidad educativa y segura para padres'
 ];
 
 export const FAQS_LIST: FAQItem[] = [
   {
     question: '¿Cómo son las reuniones mensuales en directo con el Dr. Aldo Claros?',
-    answer: 'Se realizan una vez al mes en directo a través de YouTube mediante un enlace privado exclusivo que te enviaremos directamente. Durante la sesión, el Dr. Aldo Claros presenta el tema del mes, explica pautas prácticas y responde preguntas en vivo por el chat. Importante: Las reuniones son 100% en vivo y no quedarán grabadas.',
+    answer: 'Se realizan una vez al mes en directo dentro de la misma plataforma de Hotmart para los miembros del Club. Durante la sesión, el Dr. Aldo Claros presenta el tema del mes, explica pautas prácticas y responde preguntas en vivo por el chat. Las clases quedan grabadas en la plataforma de Hotmart para los que se suscriben.',
     category: 'reunion'
   },
   {
-    question: '¿Cuándo es la próxima reunión en directo y por qué medio se transmite?',
-    answer: 'La próxima reunión será el Sábado 21 de Septiembre a las 7:30 PM (Hora Lima/Perú) en directo por YouTube a través de un enlace privado que recibirás como miembro activo del Club.',
+    question: '¿Cuándo se realizan las reuniones en directo y por qué medio se transmiten?',
+    answer: 'Las reuniones se realizan el 4° sábado de cada mes a las 7:30 PM (Hora Lima / Perú) en directo a través de la misma plataforma de Hotmart.',
     category: 'reunion'
   },
   {
     question: '¿Las reuniones quedan grabadas para ver después?',
-    answer: 'No. Las reuniones mensuales son sesiones en directo pensadas para la interacción y atención en tiempo real, por lo que no quedarán grabadas.',
+    answer: '¡Sí! Las clases quedan grabadas en la plataforma de Hotmart para todos los que se suscriben al Club, por lo que podrás verlas o repasarlas en cualquier momento y desde cualquier dispositivo mientras dure tu membresía.',
     category: 'reunion'
   },
   {
@@ -151,7 +153,7 @@ export const FAQS_LIST: FAQItem[] = [
   },
   {
     question: '¿Cuánto cuesta y cómo se paga la membresía?',
-    answer: 'La membresía cuesta únicamente S/10 al mes (sin contratos de permanencia, puedes cancelar cuando desees). Puedes pagar de forma fácil y rápida con Yape (al número 998 631 300), Plin, transferencia bancaria o tarjeta de crédito/débito.',
+    answer: 'La membresía cuesta únicamente 14 soles/ mes (sin contratos de permanencia, puedes cancelar cuando desees). Puedes pagar de forma fácil y segura con Hotmart (tarjeta, PayPal) o mediante moneda local (Yape / Plin / Transferencia bancaria al número 998 631 300).',
     category: 'pago'
   },
   {

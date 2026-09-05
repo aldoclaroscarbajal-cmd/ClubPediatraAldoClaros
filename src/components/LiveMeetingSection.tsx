@@ -14,7 +14,7 @@ import {
   Radio, 
   Lock
 } from 'lucide-react';
-import { MEETING_PARTS, UPCOMING_MEETINGS } from '../data/clubData';
+import { MEETING_PARTS, UPCOMING_MEETINGS, HOTMART_CHECKOUT_URL } from '../data/clubData';
 
 export const LiveMeetingSection: React.FC<{ onJoinClick: () => void }> = ({ onJoinClick }) => {
   const [questionText, setQuestionText] = useState('');
@@ -185,16 +185,16 @@ export const LiveMeetingSection: React.FC<{ onJoinClick: () => void }> = ({ onJo
                       ))}
                     </div>
                     <span className="text-xs font-bold text-teal-800 flex items-center gap-1.5 bg-teal-100/60 px-2.5 py-1 rounded-lg">
-                      <Lock className="w-3.5 h-3.5 text-teal-700" /> Enlace privado por YouTube
+                      <Lock className="w-3.5 h-3.5 text-teal-700" /> En directo por Hotmart
                     </span>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 flex items-center gap-2">
-              <span className="text-amber-600 font-bold text-sm">ℹ️</span>
-              <span><strong>Sesión 100% en vivo:</strong> Te enviaremos el enlace privado de YouTube antes de iniciar. Las reuniones no quedan grabadas.</span>
+            <div className="p-4 rounded-xl bg-teal-50/80 border border-teal-200 text-xs text-teal-950 flex items-center gap-2">
+              <span className="text-teal-700 font-bold text-sm">✨</span>
+              <span><strong>En vivo y grabadas:</strong> Transmitida en directo por Hotmart y <strong>todas las clases quedarán grabadas en la plataforma de Hotmart</strong> disponibles para los que se suscriben.</span>
             </div>
           </div>
 
@@ -222,12 +222,14 @@ export const LiveMeetingSection: React.FC<{ onJoinClick: () => void }> = ({ onJo
                 <p className="text-xs text-teal-100">
                   El Dr. Aldo Claros revisará esta inquietud para abordarla en la próxima reunión mensual en directo.
                 </p>
-                <button
-                  onClick={onJoinClick}
-                  className="mt-2 w-full py-3 rounded-xl bg-teal-400 hover:bg-teal-300 text-teal-950 font-bold text-sm transition-all cursor-pointer"
+                <a
+                  href={HOTMART_CHECKOUT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 w-full py-3.5 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-sm uppercase tracking-wider transition-all shadow-lg cursor-pointer flex items-center justify-center gap-2"
                 >
-                  Unirme al Club por S/10 al mes →
-                </button>
+                  ¡Quiero unirme al Club! (14 soles/ mes) →
+                </a>
               </div>
             ) : (
               <form onSubmit={handleSubmitQuestion} className="space-y-4">

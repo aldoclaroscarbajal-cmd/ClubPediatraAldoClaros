@@ -13,6 +13,7 @@ import {
   Clock,
   HeartHandshake
 } from 'lucide-react';
+import { HOTMART_CHECKOUT_URL } from '../data/clubData';
 
 export const MiniAppsInteractiveDemo: React.FC<{ onJoinClick: () => void }> = ({ onJoinClick }) => {
   const [activeTab, setActiveTab] = useState<'fever' | 'nutrition' | 'milestones' | 'sleep' | 'alarm'>('fever');
@@ -175,15 +176,18 @@ export const MiniAppsInteractiveDemo: React.FC<{ onJoinClick: () => void }> = ({
               Herramientas y Mini Apps Pediátricas
             </h3>
             <p className="text-slate-300 text-sm sm:text-base mt-1 max-w-2xl">
-              Prueba algunas de las calculadoras y guías que tendrás siempre a mano en tu celular por solo S/10 al mes.
+              Prueba algunas de las calculadoras y guías que tendrás siempre a mano en tu celular por solo 14 soles/ mes.
             </p>
           </div>
-          <button
-            onClick={onJoinClick}
-            className="self-start md:self-center px-5 py-2.5 rounded-xl bg-teal-400 hover:bg-teal-300 text-teal-950 font-bold text-sm transition-all shadow-md hover:shadow-teal-400/20 cursor-pointer whitespace-nowrap"
+          <a
+            href={HOTMART_CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="self-start md:self-center px-5 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 active:bg-amber-500 text-slate-950 font-black text-sm uppercase tracking-wider transition-all shadow-md hover:shadow-amber-400/20 cursor-pointer whitespace-nowrap inline-flex items-center gap-1.5 border border-amber-500/50"
           >
-            Acceder al Club Completo →
-          </button>
+            <Sparkles className="w-4 h-4 text-slate-950" />
+            Acceder al Club (14 soles/ mes) →
+          </a>
         </div>
 
         {/* Tab selector */}
@@ -499,9 +503,14 @@ export const MiniAppsInteractiveDemo: React.FC<{ onJoinClick: () => void }> = ({
                 <Info className="w-4 h-4 text-teal-600 shrink-0" />
                 <span>Accede a la guía de alimentación complementaria y todas las mini apps con tu membresía del Club.</span>
               </div>
-              <button onClick={onJoinClick} className="font-bold text-teal-700 underline shrink-0 cursor-pointer">
-                Ver todo en el Club →
-              </button>
+              <a 
+                href={HOTMART_CHECKOUT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-teal-700 hover:text-teal-900 underline shrink-0 cursor-pointer"
+              >
+                Ver todo en el Club (14 soles/ mes) →
+              </a>
             </div>
           </div>
         )}
@@ -734,12 +743,14 @@ export const MiniAppsInteractiveDemo: React.FC<{ onJoinClick: () => void }> = ({
         <span className="font-medium">
           🔒 Acceso ilimitado a todas las herramientas actuales y futuras incluidas en la membresía.
         </span>
-        <button
-          onClick={onJoinClick}
-          className="text-teal-800 hover:text-teal-950 font-bold underline cursor-pointer"
+        <a
+          href={HOTMART_CHECKOUT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-teal-900 hover:text-teal-950 font-black underline cursor-pointer hover:scale-[1.02] transition-transform"
         >
-          Unirse al Club por S/10 al mes →
-        </button>
+          ¡Quiero unirme al Club! (14 soles/ mes) →
+        </a>
       </div>
     </div>
   );

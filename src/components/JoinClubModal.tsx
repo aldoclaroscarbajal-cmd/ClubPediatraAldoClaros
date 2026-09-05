@@ -12,7 +12,7 @@ import {
   Lock,
   ArrowRight
 } from 'lucide-react';
-import { CLUB_CHECKLIST_ITEMS } from '../data/clubData';
+import { CLUB_CHECKLIST_ITEMS, HOTMART_CHECKOUT_URL } from '../data/clubData';
 
 interface JoinClubModalProps {
   isOpen: boolean;
@@ -81,7 +81,7 @@ export const JoinClubModal: React.FC<JoinClubModalProps> = ({ isOpen, onClose })
                         : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
-                    Plan Mensual (S/10 / mes)
+                    Plan Mensual (14 soles/ mes)
                   </button>
                   <button
                     type="button"
@@ -92,7 +92,7 @@ export const JoinClubModal: React.FC<JoinClubModalProps> = ({ isOpen, onClose })
                         : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
-                    Plan Anual (S/99 / año) <span className="text-[11px] font-extrabold text-amber-300">2 meses gratis</span>
+                    Plan Anual (140 soles / año) <span className="text-[11px] font-extrabold text-amber-300">2 meses gratis</span>
                   </button>
                 </div>
               </div>
@@ -104,10 +104,7 @@ export const JoinClubModal: React.FC<JoinClubModalProps> = ({ isOpen, onClose })
                 </div>
                 <div className="flex items-baseline justify-center gap-1.5">
                   <span className="text-4xl sm:text-5xl font-black text-slate-900">
-                    {billingCycle === 'monthly' ? 'S/10' : 'S/99'}
-                  </span>
-                  <span className="text-sm font-bold text-slate-500">
-                    {billingCycle === 'monthly' ? '/ al mes' : '/ al año'}
+                    {billingCycle === 'monthly' ? '14 soles/ mes' : '140 soles/ año'}
                   </span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 font-medium">
@@ -131,7 +128,7 @@ export const JoinClubModal: React.FC<JoinClubModalProps> = ({ isOpen, onClose })
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
-                    <span>1 reunión EN DIRECTO cada mes</span>
+                    <span>1 reunión en vivo al mes (clases grabadas)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-teal-600 shrink-0" />
@@ -148,13 +145,25 @@ export const JoinClubModal: React.FC<JoinClubModalProps> = ({ isOpen, onClose })
                 </div>
               </div>
 
-              <button
-                onClick={() => setStep('payment')}
-                className="w-full py-4 rounded-2xl bg-teal-600 hover:bg-teal-700 text-white font-extrabold text-base transition-all shadow-lg hover:shadow-teal-600/30 flex items-center justify-center gap-2 cursor-pointer"
-              >
-                Continuar al Pago ({billingCycle === 'monthly' ? 'S/10' : 'S/99'})
-                <ArrowRight className="w-5 h-5" />
-              </button>
+              <div className="space-y-3">
+                <a
+                  href={HOTMART_CHECKOUT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 rounded-2xl bg-amber-400 hover:bg-amber-300 active:bg-amber-500 text-slate-950 font-black text-base transition-all shadow-xl shadow-amber-400/20 border-2 border-amber-500/50 flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <Sparkles className="w-5 h-5 text-slate-950" />
+                  Pagar en Hotmart (14 soles/ mes)
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+
+                <button
+                  onClick={() => setStep('payment')}
+                  className="w-full py-3 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-all flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  Otras formas de pago (Yape / Plin / Transferencia)
+                </button>
+              </div>
             </div>
           )}
 
@@ -219,6 +228,19 @@ export const JoinClubModal: React.FC<JoinClubModalProps> = ({ isOpen, onClose })
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                   <button
                     type="button"
+                    onClick={() => setPaymentMethod('card')}
+                    className={`p-3 rounded-xl border text-center font-bold text-xs transition-all cursor-pointer ${
+                      paymentMethod === 'card'
+                        ? 'border-teal-600 bg-teal-50 text-teal-950 ring-2 ring-teal-500/30'
+                        : 'border-slate-200 text-slate-700 hover:border-slate-300'
+                    }`}
+                  >
+                    <div className="text-teal-700 font-extrabold text-sm">Tarjeta</div>
+                    <div className="text-[10px] text-slate-500">Débito / Crédito</div>
+                  </button>
+
+                  <button
+                    type="button"
                     onClick={() => setPaymentMethod('yape')}
                     className={`p-3 rounded-xl border text-center font-bold text-xs transition-all cursor-pointer ${
                       paymentMethod === 'yape'
@@ -227,7 +249,7 @@ export const JoinClubModal: React.FC<JoinClubModalProps> = ({ isOpen, onClose })
                     }`}
                   >
                     <div className="text-purple-700 font-extrabold text-sm">Yape</div>
-                    <div className="text-[10px] text-slate-500">QR o Número</div>
+                    <div className="text-[10px] text-slate-500">14 soles</div>
                   </button>
 
                   <button
@@ -240,20 +262,7 @@ export const JoinClubModal: React.FC<JoinClubModalProps> = ({ isOpen, onClose })
                     }`}
                   >
                     <div className="text-sky-600 font-extrabold text-sm">Plin</div>
-                    <div className="text-[10px] text-slate-500">Instantáneo</div>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => setPaymentMethod('card')}
-                    className={`p-3 rounded-xl border text-center font-bold text-xs transition-all cursor-pointer ${
-                      paymentMethod === 'card'
-                        ? 'border-teal-600 bg-teal-50 text-teal-950 ring-2 ring-teal-500/30'
-                        : 'border-slate-200 text-slate-700 hover:border-slate-300'
-                    }`}
-                  >
-                    <div className="text-teal-700 font-extrabold text-sm">Tarjeta</div>
-                    <div className="text-[10px] text-slate-500">Débito / Crédito</div>
+                    <div className="text-[10px] text-slate-500">14 soles</div>
                   </button>
 
                   <button
@@ -273,32 +282,11 @@ export const JoinClubModal: React.FC<JoinClubModalProps> = ({ isOpen, onClose })
 
               {/* Payment Details box */}
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2">
-                {paymentMethod === 'yape' && (
-                  <div className="space-y-1 text-slate-700">
-                    <div className="font-bold text-purple-900 flex items-center gap-1.5">
-                      <QrCode className="w-4 h-4 text-purple-700" />
-                      Pago por Yape (Monto: {billingCycle === 'monthly' ? 'S/10.00' : 'S/99.00'}):
-                    </div>
-                    <p>Yapear al número oficial del Club: <strong>998 631 300</strong> (Titular: Pediatra Aldo Claros)</p>
-                    <p className="text-[11px] text-slate-500">El acceso se activará en tu correo de forma inmediata.</p>
-                  </div>
-                )}
-
-                {paymentMethod === 'plin' && (
-                  <div className="space-y-1 text-slate-700">
-                    <div className="font-bold text-sky-900 flex items-center gap-1.5">
-                      <QrCode className="w-4 h-4 text-sky-700" />
-                      Pago por Plin (Monto: {billingCycle === 'monthly' ? 'S/10.00' : 'S/99.00'}):
-                    </div>
-                    <p>Transferir por Plin al número: <strong>998 631 300</strong></p>
-                  </div>
-                )}
-
                 {paymentMethod === 'card' && (
                   <div className="space-y-2 text-slate-700">
                     <div className="font-bold text-teal-900 flex items-center gap-1.5">
                       <CreditCard className="w-4 h-4 text-teal-700" />
-                      Pasarela Segura (Monto: {billingCycle === 'monthly' ? 'S/10.00' : 'S/99.00'}):
+                      Pasarela Segura Internacional (Monto: {billingCycle === 'monthly' ? '14 soles/ mes' : '140 soles/ año'}):
                     </div>
                     <input
                       type="text"
@@ -313,13 +301,34 @@ export const JoinClubModal: React.FC<JoinClubModalProps> = ({ isOpen, onClose })
                   </div>
                 )}
 
+                {paymentMethod === 'yape' && (
+                  <div className="space-y-1 text-slate-700">
+                    <div className="font-bold text-purple-900 flex items-center gap-1.5">
+                      <QrCode className="w-4 h-4 text-purple-700" />
+                      Pago por Yape (Monto: {billingCycle === 'monthly' ? '14 soles/ mes' : '140 soles/ año'}):
+                    </div>
+                    <p>Yapear al número oficial del Club: <strong>998 631 300</strong> (Titular: Pediatra Aldo Claros)</p>
+                    <p className="text-[11px] text-slate-500">El acceso se activará en tu correo de forma inmediata.</p>
+                  </div>
+                )}
+
+                {paymentMethod === 'plin' && (
+                  <div className="space-y-1 text-slate-700">
+                    <div className="font-bold text-sky-900 flex items-center gap-1.5">
+                      <QrCode className="w-4 h-4 text-sky-700" />
+                      Pago por Plin (Monto: {billingCycle === 'monthly' ? '14 soles/ mes' : '140 soles/ año'}):
+                    </div>
+                    <p>Transferir por Plin al número: <strong>998 631 300</strong></p>
+                  </div>
+                )}
+
                 {paymentMethod === 'whatsapp' && (
                   <div className="space-y-1 text-slate-700">
                     <div className="font-bold text-emerald-900 flex items-center gap-1.5">
                       <MessageSquare className="w-4 h-4 text-emerald-700" />
                       Asistencia Personalizada por WhatsApp:
                     </div>
-                    <p>Te enviaremos los datos de transferencia bancaria BCP / Interbank y confirmaremos tu membresía por chat.</p>
+                    <p>Te enviaremos los datos de transferencia bancaria BCP / Interbank o PayPal y confirmaremos tu membresía por chat.</p>
                   </div>
                 )}
               </div>
@@ -349,14 +358,14 @@ export const JoinClubModal: React.FC<JoinClubModalProps> = ({ isOpen, onClose })
               </h4>
 
               <p className="text-slate-600 text-sm max-w-md mx-auto leading-relaxed">
-                Tu membresía ha sido activada exitosamente. Ya tienes acceso a las mini apps pediátricas, guías prácticas y el enlace para la próxima <strong>reunión mensual en directo</strong>.
+                Tu membresía ha sido activada exitosamente. Ya tienes acceso a las mini apps pediátricas, guías prácticas y la próxima <strong>reunión mensual en directo por Hotmart</strong>.
               </p>
 
               <div className="p-4 rounded-2xl bg-teal-50 border border-teal-100 text-left text-xs text-teal-950 space-y-2 max-w-md mx-auto">
                 <div className="font-bold text-sm text-teal-900">Credenciales de Acceso:</div>
                 <div>👤 <strong>Titular:</strong> {parentName || 'Familia Miembro'}</div>
                 <div>✉️ <strong>Correo:</strong> {parentEmail || 'tu@correo.com'}</div>
-                <div>🎥 <strong>Próximo Directo:</strong> Sábado 21 de Septiembre, 7:30 PM (Enlace privado de YouTube enviado a tu correo/WhatsApp)</div>
+                <div>🎥 <strong>Próximo Directo:</strong> 4° Sábado de cada mes, 7:30 PM (Hora Lima / Perú) (En directo por Hotmart y las clases quedan grabadas en la plataforma para los suscriptores)</div>
               </div>
 
               <div className="pt-4 flex flex-col sm:flex-row gap-3 justify-center">
