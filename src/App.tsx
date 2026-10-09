@@ -233,7 +233,7 @@ export default function App() {
                       Membresía Todo Incluido
                     </span>
                     <div className="text-3xl sm:text-4xl font-black text-slate-900 mt-0.5">
-                      14 soles/ mes
+                      15 soles/ mes
                     </div>
                   </div>
                   <span className="inline-flex self-start sm:self-center px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold">
@@ -286,7 +286,7 @@ export default function App() {
                     <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                   </a>
                   <div className="text-center text-xs text-slate-500 font-medium">
-                    ⚡ Acceso inmediato desde tu celular por solo 14 soles/ mes • Cancela cuando quieras
+                    ⚡ Acceso inmediato desde tu celular por solo 15 soles/ mes • Cancela cuando quieras
                   </div>
                 </div>
               </div>
@@ -455,7 +455,7 @@ export default function App() {
                   className="px-8 py-4 rounded-2xl bg-amber-400 hover:bg-amber-300 active:bg-amber-500 text-slate-950 font-black text-base sm:text-lg uppercase tracking-wider transition-all shadow-lg border-2 border-amber-500/50 cursor-pointer inline-flex items-center gap-2 hover:scale-[1.02]"
                 >
                   <Sparkles className="w-5 h-5 text-slate-950" />
-                  <span>¡Quiero unirme al Club! (14 soles/ mes)</span>
+                  <span>¡Quiero unirme al Club! (15 soles/ mes)</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
@@ -652,7 +652,7 @@ export default function App() {
                 CLUB PEDIATRA ALDO CLAROS
               </h3>
               <div className="text-4xl sm:text-5xl font-black text-emerald-400 tracking-tight">
-                14 soles/ mes
+                15 soles/ mes
               </div>
               <p className="text-slate-300 text-xs sm:text-sm max-w-lg mx-auto">
                 Acceso completo e ilimitado a todas las mini apps digitales + encuentro educativo mensual en vivo (las clases quedan grabadas en Hotmart para suscriptores).
@@ -785,7 +785,7 @@ export default function App() {
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </a>
               <div className="text-xs text-slate-500 font-medium">
-                🔒 14 soles/ mes • Pago seguro con Tarjeta, Yape, Plin o PayPal • Sin contratos de permanencia
+                🔒 15 soles/ mes • Pago seguro con Tarjeta, Yape, Plin o PayPal • Sin contratos de permanencia
               </div>
             </div>
 
@@ -862,7 +862,7 @@ export default function App() {
           {/* Highlight Badge Box */}
           <div className="inline-block bg-slate-800/80 border border-teal-500/40 rounded-2xl p-6 max-w-xl mx-auto shadow-2xl text-center space-y-2">
             <div className="text-3xl sm:text-4xl font-black text-emerald-400">
-              14 soles/ mes
+              15 soles/ mes
             </div>
             <div className="text-xs sm:text-sm font-semibold text-slate-200">
               Mini apps + herramientas + nuevos contenidos + reunión mensual en directo (clases grabadas en Hotmart)
