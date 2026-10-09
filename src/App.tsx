@@ -63,7 +63,7 @@ export default function App() {
             1 Reunión en Directo al Mes
           </span>
           <span>
-            Por solo <strong>14 soles/ mes</strong>: Mini apps pediátricas + reunión educativa mensual con el <strong>Pediatra Aldo Claros</strong>.
+            Por solo <strong>15 soles/ mes</strong>: Mini apps pediátricas + reunión educativa mensual con el <strong>Pediatra Aldo Claros</strong>.
           </span>
           <a
             href={HOTMART_CHECKOUT_URL}
@@ -109,7 +109,7 @@ export default function App() {
                 Mini Apps
               </a>
               <a href="#oferta" className="hover:text-teal-700 transition-colors">
-                Membresía 14 soles/ mes
+                Membresía 15 soles/ mes
               </a>
               <a href="#preguntas-frecuentes" className="hover:text-teal-700 transition-colors">
                 Preguntas
@@ -124,7 +124,7 @@ export default function App() {
               className="px-5 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 active:bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md hover:shadow-amber-400/25 transition-all cursor-pointer flex items-center gap-1.5 border border-amber-500/50 hover:scale-[1.02]"
             >
               <Sparkles className="w-3.5 h-3.5 text-slate-950" />
-              Entrar al Club (14 soles/ mes)
+              Entrar al Club (15 soles/ mes)
             </a>
           </div>
 
@@ -169,7 +169,7 @@ export default function App() {
               onClick={() => setMobileMenuOpen(false)}
               className="block text-sm font-bold text-slate-700 py-1.5"
             >
-              🏷️ Oferta 14 soles/ mes
+              🏷️ Oferta 15 soles/ mes
             </a>
             <a 
               href="#preguntas-frecuentes" 
@@ -188,7 +188,7 @@ export default function App() {
                 className="w-full py-3.5 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 active:bg-amber-500 text-slate-950 font-black text-sm uppercase tracking-wider text-center shadow-md cursor-pointer flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-4 h-4 text-slate-950" />
-                ¡QUIERO UNIRME AL CLUB! (14 soles/ mes)
+                ¡QUIERO UNIRME AL CLUB! (15 soles/ mes)
               </a>
             </div>
           </div>
@@ -741,7 +741,7 @@ export default function App() {
                 CLUB PEDIATRA ALDO CLAROS
               </h2>
               <div className="text-3xl sm:text-4xl font-black text-teal-800">
-                TODO POR 14 SOLES/ MES
+                TODO POR 15 SOLES/ MES
               </div>
               <p className="text-slate-600 text-sm sm:text-base font-medium">
                 Tu membresía incluye acceso total e inmediato:
@@ -856,7 +856,7 @@ export default function App() {
           </h2>
 
           <p className="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Por solo <strong>14 soles/ mes</strong> tendrás acceso a las herramientas disponibles dentro del Club, nuevos recursos y una reunión educativa mensual en directo.
+            Por solo <strong>15 soles/ mes</strong> tendrás acceso a las herramientas disponibles dentro del Club, nuevos recursos y una reunión educativa mensual en directo.
           </p>
 
           {/* Highlight Badge Box */}
